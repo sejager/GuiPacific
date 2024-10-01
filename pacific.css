@@ -1,16 +1,28 @@
+/*
+File: pacifics.css
+Edited by Sebastian Gyger
+Part of Homework 2 in Gui 1
+This stylesheet formats the index page.
+*/
+
 header, hgroup, nav, footer, figure, figcaption, aside, section, article {
 	display: block;
 }
 
 body {
-	background-image: linear-gradient(to bottom, white, #00569f);
+	background-image: url(ptrbackground.jpg);
+	background-color: #00569f;
+	background-repeat: repeat-x;
 	color: #666666;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Set up the entire wrapper to be in a grid like system and only take up a certain
+amount of the whole page */
 #wrapper {
 	width: 80%;
 	min-width: 600px;
+	max-width: 1200px;
 	margin: auto;
 	display: grid;
 	grid-template-areas: 
@@ -19,6 +31,8 @@ body {
 		'nav footer';
 }
 
+/* Sets an image that is always constant on the right end
+with blue color filling out the rest*/
 header {
 	color: white;
 	background-image: url('sunset.jpg');
@@ -43,6 +57,8 @@ h2 {
 	padding-bottom: 10px;
 }
 
+/* Navigation bar with different behaviors when interacted
+with. */
 nav {
 	font-size: 1em;
 	background-color: #8fc6e3;
@@ -71,8 +87,8 @@ nav a:hover {
 
 #content {
 	background-color: white;
-	grid-area: content;
 	padding: 20px;
+	grid-area: content;
 }
 
 #content ul {
